@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function CreateUser() {
+function RegisterCommonUser() {
+    /* TODO: This component should provide a form to allow common user register with email address, 
+    password, and institutionId.
+    */
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -33,9 +36,9 @@ function CreateUser() {
                     placeholder="Password" 
                 />
             </div>
-            <button onClick={handleSubmit}>Create User</button>
+            <button onClick={handleSubmit}>Register Common User</button>
         </div>
     );
 }
 
-export default CreateUser;
+export default RegisterCommonUser;

@@ -31,7 +31,7 @@ def get_db():
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return "You are connected to backend"
 
 @app.post("/user/create/")
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
