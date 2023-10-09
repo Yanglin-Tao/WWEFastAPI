@@ -12,7 +12,7 @@ function RegisterCommonUser() {
         const payload = { email, password };
         console.log("Sending request with payload:", payload);
         try {
-            const response = await axios.post('http://localhost:8000/user/create/', { email, password });
+            const response = await axios.post('http://localhost:8000/register-common-user', { email, password });
             console.log(response.data);
         } catch (error) {
             console.error("Error creating user:", error);
