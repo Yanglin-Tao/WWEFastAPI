@@ -3,10 +3,11 @@
 import ReactDOM from "react-dom/client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SignInSide from './Forms/SignInSide';
+import SignInSide from './Forms/SignIn';
 import SignUp from './Forms/SignUp';
 import Dashboard from './Forms/Dashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Forget from "./Forms/Forget";
 import RegisterCommonUser from "./CommonUser/registerCommonUser";
 import { useNavigate } from 'react-router-dom';
 
@@ -26,23 +27,24 @@ function App() {
     }, []);
 
     return (
-        <div>
-            Welcome to What We Eat
-            <RegisterCommonUser /> 
-        </div>
-        // <>
-        //     {/* {data ? JSON.stringify(data) : "Welcome to What We Eat"}
-        //         <CreateUser /> */}
-        //     <BrowserRouter>
-        //         <Routes>
-        //             <Route path="/" element={<Dashboard />} />
-        //             {/* <Route exact path="/" component={ () => <Dashboard user={this.state.user}/> } /> */}
-        //             <Route path="/login" element={<SignInSide />} />
-        //             <Route path="/signup" element={<SignUp />} />
-        //             {/* Add other routes as needed */}
-        //         </Routes>
-        //     </BrowserRouter>
-        // </>
+        // <div>
+        //     Welcome to What We Eat
+        //     <RegisterCommonUser /> 
+        // </div>
+        <>
+            {/* {data ? JSON.stringify(data) : "Welcome to What We Eat"}
+                <CreateUser /> */}
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    {/* <Route exact path="/" component={ () => <Dashboard user={this.state.user}/> } /> */}
+                    <Route path="/login" element={<SignInSide />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/forget" element={<Forget />} />
+                    {/* Add other routes as needed */}
+                </Routes>
+            </BrowserRouter>
+        </>
     );
 }
 
