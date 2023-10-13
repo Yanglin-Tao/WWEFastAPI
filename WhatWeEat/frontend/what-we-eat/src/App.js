@@ -8,6 +8,7 @@ import SignUp from './Forms/SignUp';
 import Dashboard from './Forms/Dashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Forget from "./Forms/Forget";
+import DisplayDailyMenu from "./Menu/displayDailyMenu";
 import RegisterCommonUser from "./CommonUser/registerCommonUser";
 import { useNavigate } from 'react-router-dom';
 
@@ -36,12 +37,13 @@ function App() {
                 <CreateUser /> */}
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/" element={<SignInSide />} />
                     {/* <Route exact path="/" component={ () => <Dashboard user={this.state.user}/> } /> */}
-                    <Route path="/login" element={<SignInSide />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/forget" element={<Forget />} />
                     {/* Add other routes as needed */}
+                    <Route path="/displayDailyMenu" element={<DisplayDailyMenu />} />
                 </Routes>
             </BrowserRouter>
         </>
