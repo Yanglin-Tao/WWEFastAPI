@@ -1,21 +1,24 @@
 # What We Eat
 ## Backend
 ### Set up 
-Python FastAPI (assume you already installed pip tool and python virtual env)
+Python FastAPI (assume you already installed pip tool and python virtual env), also make sure you have Python 3.11
 1. pipenv shell
 1. pip install 'fastapi[all]' 
 2. pip install uvicorn 
 3. pip install sqlalchemy 
 4. pip install psycopg2-binary 
 ### To run backend:
-`uvicorn main:app --reload`
+1. Make sure you are in `/WWEFastAPI/WhatWeEat/backend/app` directory
+2. Run `uvicorn main:app --reload`
 
 ## Frontend
 ### Set up 
 React (assuming you already installed React)
 1. npm install axios
-### To run backend:
-Make sure your backend server is up and running then run `npm start`
+### To run fronend:
+1. Make sure your backend server is up and running
+2. Make sure you are in `WWEFastAPI/WhatWeEat/frontend/what-we-eat` directory
+3. Run `npm start`
 
 
 ## Database
