@@ -3,14 +3,23 @@
 import ReactDOM from "react-dom/client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SignInSide from './Forms/SignIn';
-import SignUp from './Forms/SignUp';
-import Dashboard from './Forms/Dashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Forget from "./Forms/Forget";
-import DisplayDailyMenu from "./Menu/displayDailyMenu";
+import LoginUser from "./Main/loginUser";
 import RegisterCommonUser from "./CommonUser/registerCommonUser";
-import { useNavigate } from 'react-router-dom';
+import LoginCommonUser from "./CommonUser/loginCommonUser";
+import ForgetCommonUserPassword from "./CommonUser/forgetCommonUserPassword";
+import DisplayCommonUserDashboard from "./CommonUser/displayCommonUserDashboard";
+import LoginDiningHall from "./DiningHall/loginDiningHall"
+import RegisterDiningHall from "./DiningHall/registerDiningHall"
+import ForgetDiningHallPassword from "./DiningHall/forgetDiningHallPassword";
+import DisplayDiningHallDashboard from "./DiningHall/displayDiningHallDashboard";
+import DisplayMenuItem from "./Menu/displayMenuItem"
+import DisplayDailyMenu from "./Menu/displayDailyMenu";
+// import SignInSide from './Forms/SignIn';
+// import SignUp from './Forms/SignUp';
+// import Dashboard from './Forms/Dashboard';
+// import { useNavigate } from 'react-router-dom';
+// import Forget from "./Forms/Forget";
 
 
 function App() {
@@ -28,22 +37,24 @@ function App() {
     }, []);
 
     return (
-        // <div>
-        //     Welcome to What We Eat
-        //     <RegisterCommonUser /> 
-        // </div>
         <>
-            {/* {data ? JSON.stringify(data) : "Welcome to What We Eat"}
-                <CreateUser /> */}
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<SignInSide />} />
-                    {/* <Route exact path="/" component={ () => <Dashboard user={this.state.user}/> } /> */}
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/signup" element={<SignUp />} />
-                    <Route path="/forget" element={<Forget />} />
-                    {/* Add other routes as needed */}
+                    {/* Main route */}
+                    <Route path="/" element={<LoginUser />} />
+                    {/* Common User route */}
+                    <Route path="/loginCommonUser" element={<LoginCommonUser />} />
+                    <Route path="/registerCommonUser" element={<RegisterCommonUser />} />
+                    <Route path="/forgetCommonUserPassword" element={<ForgetCommonUserPassword />} />
+                    <Route path="/displayCommonUserDashboard" element={<DisplayCommonUserDashboard />} />
+                    {/* Dining Hall route */}
+                    <Route path="/loginDiningHall" element={<LoginDiningHall />} />
+                    <Route path="/registerDiningHall" element={<RegisterDiningHall />} />
+                    <Route path="/forgetDiningHallPassword" element={<ForgetDiningHallPassword />} />
+                    <Route path="/displayDiningHallDashboard" element={<DisplayDiningHallDashboard />} />
+                    {/* Menu route */}
                     <Route path="/displayDailyMenu" element={<DisplayDailyMenu />} />
+                    <Route path="/displayMenuItem" element={<DisplayMenuItem />} />
                 </Routes>
             </BrowserRouter>
         </>
@@ -52,26 +63,5 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
