@@ -1,6 +1,6 @@
 import React from 'react';
 
-/* TODO: This component should display user's profile, including user's email and institution. */
+/* TODO: This component should display common user's allergy. */
 function DisplayCommonUserAllergy() {
     return (
         <div>
