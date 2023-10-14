@@ -9,6 +9,7 @@ import RegisterCommonUser from "./CommonUser/registerCommonUser";
 import LoginCommonUser from "./CommonUser/loginCommonUser";
 import ForgetCommonUserPassword from "./CommonUser/forgetCommonUserPassword";
 import DisplayCommonUserDashboard from "./CommonUser/displayCommonUserDashboard";
+import BrowseDailyMenu from "./CommonUser/browseDailyMenu";
 import LoginDiningHall from "./DiningHall/loginDiningHall"
 import RegisterDiningHall from "./DiningHall/registerDiningHall"
 import ForgetDiningHallPassword from "./DiningHall/forgetDiningHallPassword";
@@ -47,6 +48,7 @@ function App() {
                     <Route path="/registerCommonUser" element={<RegisterCommonUser />} />
                     <Route path="/forgetCommonUserPassword" element={<ForgetCommonUserPassword />} />
                     <Route path="/displayCommonUserDashboard" element={<DisplayCommonUserDashboard />} />
+                    <Route path="/browseDailyMenu" element={<BrowseDailyMenu />} />
                     {/* Dining Hall route */}
                     <Route path="/loginDiningHall" element={<LoginDiningHall />} />
                     <Route path="/registerDiningHall" element={<RegisterDiningHall />} />

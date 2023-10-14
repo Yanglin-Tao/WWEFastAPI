@@ -110,7 +110,7 @@ function DisplayDailyMenu() {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">View</Button>
+                        <Button size="small">View Details</Button>
                         <Button size="small">Edit</Button>
                     </CardActions>
                     </Card>
