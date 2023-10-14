@@ -25,6 +25,11 @@ import TopTenFoodAllergies from './topTenFoodAllergies';
 
 /* TODO: This component should display dining hall user's dashboard. It should navigate the dining hall users to
 different use cases. 
+Dashboard -> displayDiningHallDashboard
+Today's Menu -> displayDailyMenu
+Upload Menu -> createDailyMenu
+My Reports -> displayDiningHallMonthlyReport
+My Account -> displayDininghallAccount
 */
 
 function Copyright(props) {

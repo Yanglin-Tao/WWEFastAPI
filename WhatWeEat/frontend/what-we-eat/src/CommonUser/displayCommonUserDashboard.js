@@ -26,6 +26,15 @@ import RecentMeals from './recentMeals';
 
 /* TODO: This component should display common user's dashboard. It should navigate the common users to
 different use cases. 
+Dashboard -> displayCommonUserDashboard
+Browse Menu -> browseDailyMenu
+My Meal Cart -> mealShoppingCart
+My Goals -> displayCommonUserGoals / editCommonUserGoals
+My Reports -> displayCommonUserMonthlyReport
+Allergies -> displayCommonUserAllergy / editCommonUserAllgery
+Preferences -> displayCommonUserFoodPreference / editCommonUserFoodPreference
+My Account -> displayCommonUserAccount
+Privacy Settings -> displayCommonUserPrivacySettings / editCommonUserPrivacySettings
 */
 
 // TODO remove, this demo shouldn't need to reset the theme.
