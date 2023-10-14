@@ -16,6 +16,12 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+/* TODO: This component should let common user browse a list of menuItems in dailyMenu. 
+    Each item displays a name, customer rating, food warning/recommendation and a button to add 
+    the menuItem to shopping cart. 
+    When click on the menuItem to view details, it should show displayMenuItem component. 
+*/
+
 function Copyright() {
     return (
       <Typography variant="body2" color="text.secondary" align="center">

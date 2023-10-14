@@ -3,6 +3,9 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import Title from './Title';
 
+/* TODO: This component should show common user's total calories intake in the day.  
+*/
+
 function preventDefault(event) {
   event.preventDefault();
 }

@@ -15,6 +15,11 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+/* TODO: This component should display a list of menuItems in dailyMenu. 
+    Each item displays a name, customer rating, food warning/recommendation and a button to add 
+    the menuItem to shopping cart. 
+    When click on the menuItem, it should show displayMenuItem component.
+    */
 
 function Copyright() {
   return (
@@ -33,13 +38,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
-
 function DisplayDailyMenu() {
-    /* TODO: This component should display a list of menuItems in dailyMenu. 
-    Each item displays a name, customer rating, food warning/recommendation and a button to add 
-    the menuItem to shopping cart. 
-    When click on the menuItem, it should show displayMenuItem component.
-    */
     return (
         <ThemeProvider theme={defaultTheme}>
         <CssBaseline />

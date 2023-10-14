@@ -3,6 +3,10 @@ import { useTheme } from '@mui/material/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 
+/* TODO: This component should show a line chart of common user's calories in take in the day. 
+This component is optional to have.  
+*/
+
 // Generate Sales Data
 function createData(time, amount) {
   return { time, amount };

@@ -13,6 +13,10 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
+/* TODO: This component should provide a form to allow dining hall administrator login with email address 
+  and password.
+*/
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -30,9 +34,6 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 function LoginDiningHall() {
-    /* TODO: This component should provide a form to allow dining hall administrator login with email address 
-    and password.
-    */
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);

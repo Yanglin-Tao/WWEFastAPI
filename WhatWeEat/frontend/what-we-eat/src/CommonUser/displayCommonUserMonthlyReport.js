@@ -1,8 +1,8 @@
 import React from 'react';
 
+/* TODO: This component should display user's monthly calorie intake.
+*/
 function DisplayCommonUserMonthlyReport() {
-    /* TODO: This component should display user's monthly calorie intake.
-    */
     return (
         <div>
             DisplayCommonUserMonthlyReport

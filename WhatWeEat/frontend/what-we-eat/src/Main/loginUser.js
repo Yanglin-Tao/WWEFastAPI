@@ -73,6 +73,9 @@ function LoginUser() {
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
               <LockOutlinedIcon />
             </Avatar>
+            <Typography component="h1" variant="h5">
+              Welcome to What We Eat
+            </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               {/* <Grid container> */}
                 <Grid item xs>
@@ -83,6 +86,11 @@ function LoginUser() {
                 <Grid item xs>
                   <Link to="/loginDiningHall" variant="body2">
                     I'm a Dining Hall Admin
+                  </Link>
+                </Grid>
+                <Grid item xs>
+                  <Link to="/registerInstitution" variant="body2">
+                    I'm an Institution Admin
                   </Link>
                 </Grid>
               {/* </Grid> */}

@@ -14,6 +14,10 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
+/* TODO: This component should provide a form to allow common user register with email address, 
+  password, and institutionId.
+*/
+
 function Copyright(props) {
     return (
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -31,9 +35,6 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 function RegisterCommonUser() {
-    /* TODO: This component should provide a form to allow common user register with email address, 
-    password, and institutionId.
-    */
     // const [email, setEmail] = useState("");
     // const [password, setPassword] = useState("");
 

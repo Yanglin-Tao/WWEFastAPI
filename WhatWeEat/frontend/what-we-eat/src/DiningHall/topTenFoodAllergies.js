@@ -7,6 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
 
+/* This component should display top ten food allergies common users have. */
+
 // Generate Order Data
 function createData(id, allergy, students, percentage) {
   return { id, allergy, students, percentage };

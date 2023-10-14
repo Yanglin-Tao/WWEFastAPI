@@ -13,8 +13,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
-/* TODO: This component should provide a form to allow dining hall administrator register with email, 
-  password, and institutionId.
+/* TODO: This component should provide a form to register an institution.
 */
 
 function Copyright(props) {
@@ -33,7 +32,7 @@ function Copyright(props) {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-function RegisterDiningHall() {
+function RegisterInstitution() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -70,39 +69,8 @@ function RegisterDiningHall() {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="Institution Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -120,13 +88,6 @@ function RegisterDiningHall() {
             >
               Sign Up
             </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link to="/loginDiningHall" variant="body2">
-                  Already have an account? Sign in
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
         </Box>
         <Copyright sx={{ mt: 5 }} />
@@ -135,4 +96,4 @@ function RegisterDiningHall() {
   );
 }
 
-export default RegisterDiningHall;
+export default RegisterInstitution;

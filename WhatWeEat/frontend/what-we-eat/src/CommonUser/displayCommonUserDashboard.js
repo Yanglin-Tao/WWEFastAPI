@@ -24,6 +24,10 @@ import CalorieChart from './calorieChart';
 import DailyCalorieIntake from './dailyCalorieIntake';
 import RecentMeals from './recentMeals';
 
+/* TODO: This component should display common user's dashboard. It should navigate the common users to
+different use cases. 
+*/
+
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
@@ -170,7 +174,7 @@ function DisplayCommonUserDashboard() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {/* Chart */}
+              {/* calorieChart */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
                   sx={{

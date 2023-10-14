@@ -20,10 +20,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import PersonIcon from '@mui/icons-material/Person';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './navigateDiningHallDashboard';
-import Chart from './Chart';
-import Deposits from './Deposits';
 import TopTenRatedFood from './topTenRatedFood';
 import TopTenFoodAllergies from './topTenFoodAllergies';
+
+/* TODO: This component should display dining hall user's dashboard. It should navigate the dining hall users to
+different use cases. 
+*/
 
 function Copyright(props) {
   return (

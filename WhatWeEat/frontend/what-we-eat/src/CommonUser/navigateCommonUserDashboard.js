@@ -10,6 +10,9 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
+/* TODO: This component is a list of items for common users to navigate their dashboards.
+*/
+
 export const mainListItems = (
   <React.Fragment>
     <ListItemButton>

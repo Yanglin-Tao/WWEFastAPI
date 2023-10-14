@@ -16,6 +16,7 @@ import ForgetDiningHallPassword from "./DiningHall/forgetDiningHallPassword";
 import DisplayDiningHallDashboard from "./DiningHall/displayDiningHallDashboard";
 import DisplayMenuItem from "./Menu/displayMenuItem"
 import DisplayDailyMenu from "./Menu/displayDailyMenu";
+import RegisterInstitution from "./Institution/registerInstitution";
 // import SignInSide from './Forms/SignIn';
 // import SignUp from './Forms/SignUp';
 // import Dashboard from './Forms/Dashboard';
@@ -43,6 +44,8 @@ function App() {
                 <Routes>
                     {/* Main route */}
                     <Route path="/" element={<LoginUser />} />
+                    {/* Institution route */}
+                    <Route path="/registerInstitution" element={<RegisterInstitution />} />
                     {/* Common User route */}
                     <Route path="/loginCommonUser" element={<LoginCommonUser />} />
                     <Route path="/registerCommonUser" element={<RegisterCommonUser />} />

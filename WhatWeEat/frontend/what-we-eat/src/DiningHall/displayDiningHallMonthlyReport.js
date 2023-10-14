@@ -1,9 +1,8 @@
 import React from 'react';
 
+/* TODO: This component should display a dining hall's monthly reports.
+*/
 function DisplayDiningHallMonthlyReport() {
-    /* TODO: This component should display a dining hall's top 10 priority food allergies and top 10 highest
-    rated dishes.
-    */
     return (
         <div>
             DisplayDiningHallMonthlyReport

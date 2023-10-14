@@ -7,6 +7,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
 
+/* TODO: This component shows a list of common user's recent meals. This component is optional to have.
+*/
+
 // Generate Order Data
 function createData( id, date, time, diningHall, calories ) {
   return { id, date, time, diningHall, calories };
