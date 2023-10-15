@@ -12,46 +12,55 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 
 /* TODO: This component is a list of items for common users to navigate their dashboards.
 */
+const dashboard = () => {
+  window.open("/displayCommonUserDashboard", "_self");
+};
 
+const menu = () => {
+  window.open("/browseDailyMenu", "_self");
+};
+const allergy = () => {
+  window.open("/displayCommonUserAllergy", "_self");
+};
+const preference = () => {
+  window.open("/displayCommonUserFoodPreference", "_self");
+};
+const goal = () => {
+  window.open("/displayCommonUserGoals", "_self");
+};
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
+    <ListItemButton onClick={dashboard}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={menu}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Browse Menu" />
     </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="My Meal Cart" />
-    </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={goal}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
       <ListItemText primary="My Goals" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={dashboard}>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
       <ListItemText primary="My Reports" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={allergy}>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Allergies" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={preference}>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
@@ -65,13 +74,13 @@ export const secondaryListItems = (
     <ListSubheader component="div" inset>
       Settings
     </ListSubheader>
-    <ListItemButton>
+    <ListItemButton onClick={dashboard}>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="My Account" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton onClick={dashboard}>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>

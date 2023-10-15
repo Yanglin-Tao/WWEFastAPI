@@ -18,7 +18,11 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import PersonIcon from '@mui/icons-material/Person';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 import { mainListItems, secondaryListItems } from './navigateCommonUserDashboard';
 import CalorieChart from './calorieChart';
 import DailyCalorieIntake from './dailyCalorieIntake';
@@ -42,14 +46,14 @@ const defaultTheme = createTheme();
 
 function Copyright(props) {
   return (
-      <Typography variant="body2" color="text.secondary" align="center" {...props}>
-          {'Copyright © '}
-          <Link color="inherit" to="/">
-              What We Eat
-          </Link>{' '}
-          {new Date().getFullYear()}
-          {'.'}
-      </Typography>
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" to="/">
+        What We Eat
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
   );
 }
 
@@ -101,11 +105,28 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 function DisplayCommonUserDashboard() {
   const [open, setOpen] = React.useState(true);
+  const [auth, setAuth] = React.useState(true);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleChange = (event) => {
+    setAuth(event.target.checked);
+  };
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const toggleDrawer = () => {
     setOpen(!open);
   };
   const login = () => {
-    window.open("/login", "_self");
+    window.open("/", "_self");
+  };
+  const shop = () => {
+    window.open("/mealShoppingCart", "_self");
   };
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -138,14 +159,44 @@ function DisplayCommonUserDashboard() {
             >
               What We Eat Dashboard
             </Typography>
-            <IconButton color="inherit" onClick={login}>
+            <IconButton size="large" color="inherit" onClick={shop}>
               {/* <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
               </Badge> */}
-              <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                <PersonIcon />
-              </Avatar>
+              <ShoppingCartIcon />
             </IconButton>
+            {auth && (
+              <div>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleMenu}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  <MenuItem onClick={handleClose}>Profile</MenuItem>
+                  <MenuItem onClick={handleClose}>My account</MenuItem>
+                </Menu>
+              </div>
+            )}
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -220,7 +271,7 @@ function DisplayCommonUserDashboard() {
           </Container>
         </Box>
       </Box>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 

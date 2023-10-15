@@ -20,6 +20,7 @@ import DisplayDiningHallDashboard from "./DiningHall/displayDiningHallDashboard"
 import DisplayMenuItem from "./Menu/displayMenuItem"
 import DisplayDailyMenu from "./Menu/displayDailyMenu";
 import RegisterInstitution from "./Institution/registerInstitution";
+import MealShoppingCart from "./CommonUser/mealShoppingCart";
 // import SignInSide from './Forms/SignIn';
 // import SignUp from './Forms/SignUp';
 // import Dashboard from './Forms/Dashboard';
@@ -58,6 +59,7 @@ function App() {
                     <Route path="/displayCommonUserFoodPreference" element={<DisplayCommonUserFoodPreference />} />
                     <Route path="/displayCommonUserAllergy" element={<DisplayCommonUserAllergy />} />
                     <Route path="/displayCommonUserGoals" element={<DisplayCommonUserGoals />} />
+                    <Route path="/mealShoppingCart" element={<MealShoppingCart />} />
                     {/* Dining Hall route */}
                     <Route path="/loginDiningHall" element={<LoginDiningHall />} />
                     <Route path="/registerDiningHall" element={<RegisterDiningHall />} />

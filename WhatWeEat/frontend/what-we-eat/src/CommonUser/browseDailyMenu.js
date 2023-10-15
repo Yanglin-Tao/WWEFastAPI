@@ -1,7 +1,11 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import CameraIcon from '@mui/icons-material/PhotoCamera';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -23,32 +27,32 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 */
 
 function Copyright() {
-    return (
-      <Typography variant="body2" color="text.secondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
-          What We Eat
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        What We Eat
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const cards = [
-    {
-      id: 1,
-      name: 'Food Item 1',
-      calories: 300,
-      imageUrl: 'https://source.unsplash.com/random?food1',
-    },
-    {
-      id: 2,
-      name: 'Food Item 2',
-      calories: 450,
-      imageUrl: 'https://source.unsplash.com/random?food2',
-    },
-  ];
+  {
+    id: 1,
+    name: 'Food Item 1',
+    calories: 300,
+    imageUrl: 'https://source.unsplash.com/random?food1',
+  },
+  {
+    id: 2,
+    name: 'Food Item 2',
+    calories: 450,
+    imageUrl: 'https://source.unsplash.com/random?food2',
+  },
+];
 
 function BrowseDailyMenu() {
   const [cartItems, setCartItems] = React.useState([]);
@@ -61,15 +65,36 @@ function BrowseDailyMenu() {
     setTotalCalories(totalCalories + foodItem.calories);
   };
 
+  const dashboard = () => {
+    window.open("/displayCommonUserDashboard", "_self");
+  };
+
+  const shop = () => {
+    window.open("/mealShoppingCart", "_self");
+  };
+
   return (
     <ThemeProvider theme={createTheme()}>
       <CssBaseline />
       <AppBar position="relative">
-        <Toolbar>
+        <Toolbar >
           <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
+          <Typography component="h1"
+            variant="h6"
+            color="inherit"
+            noWrap
+            sx={{ flexGrow: 1 }}>
             Today's Menu
           </Typography>
+          <IconButton size="large" color="inherit" onClick={shop}>
+            {/* <Badge badgeContent={4} color="secondary">
+                <NotificationsIcon />
+              </Badge> */}
+            <ShoppingCartIcon />
+          </IconButton>
+          <IconButton color="inherit" onClick={dashboard}>
+            <WidgetsIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <main>
@@ -143,17 +168,6 @@ function BrowseDailyMenu() {
         </Typography>
         <Copyright />
         {/* Display the shopping cart */}
-        <div>
-          <h2>Shopping Cart</h2>
-          <ul>
-            {cartItems.map((item, index) => (
-              <li key={index}>
-                {item.name} - {item.calories} calories
-              </li>
-            ))}
-          </ul>
-          <p>Total Calories: {totalCalories}</p>
-        </div>
       </Box>
     </ThemeProvider>
   );
