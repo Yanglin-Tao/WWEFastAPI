@@ -1,6 +1,6 @@
 # What We Eat
 ## Backend
-This repository is in process of migrating to https://github.com/Yanglin-Tao/WhatWeEat, a web application based on TurboGears2 backend.
+This repository is in process of migrating to https://github.com/Yanglin-Tao/WWETG2, a web application based on TurboGears2 backend.
 ### Set up 
 Python FastAPI (assume you already installed pip tool and python virtual env), also make sure you have Python 3.11
 1. pipenv shell
